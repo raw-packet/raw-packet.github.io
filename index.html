@@ -1,1 +1,520 @@
-Site for Raw-packet Project
+<!DOCTYPE html>
+<html>
+<head>
+    <!--region Google analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125485820-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-125485820-1');
+    </script>
+    <!--endregion-->
+    <meta charset="utf-8">
+    <title>Raw-packet project</title>
+    <!--region CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css"
+          integrity="sha256-+8ReLFz1xaTiP3T0xcJVWrHneeFwCnJUJwvcM0L+Ufw="
+          crossorigin="anonymous"/>
+    <!--endregion-->
+</head>
+<body>
+
+<!--region Warning Box-->
+<div id="WarningBox" class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="WarningBox-header">Important information!</h1>
+            </div>
+            <div class="modal-body" id="WarningBox-body">
+                <p>This project is created only for education process and can not be used for law violation or personal
+                    gain.</p>
+                <p>The author of this project is not responsible for any possible harm caused by the materials
+                    of this project.</p>
+                <hr>
+            </div>
+            <div class="modal-footer" id="WarningBox-footer">
+                <h5>
+                    You will use the materials of this project only for the education process?
+                </h5>
+            </div>
+            <div class="modal-footer">
+                <button id="WarningBox-button-yes" onclick="CloseWarning()" type="button"
+                        class="btn btn-primary" data-dismiss="modal">Yes
+                </button>
+                <button id="WarningBox-button-no" onclick="CloseWindow()" type="button"
+                        class="btn btn-secondary">No
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--endregion-->
+
+<!--region Navbar-->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+    <a class="navbar-brand" href="#">Raw-packet project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#info">Info <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#install">Install</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#scripts" id="ScriptsDropdown" role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Scripts
+                </a>
+                <div class="dropdown-menu" aria-labelledby="ScriptsDropdown">
+                    <a class="dropdown-item" href="#dhcp_scripts">DHCP</a>
+                    <a class="dropdown-item" href="#apple_scripts">Apple</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#binary_exploits">Binary exploits</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#demo_video">Demo video</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">-->
+        <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+        <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+        <!--</form>-->
+    </div>
+</nav>
+<!--endregion-->
+
+<!--region Content-->
+<div id="container" class="container">
+    <div class="container">
+        <br>
+        <img src="/static/images/logo/logo-caption-gray.jpg" alt="logo" width="900">
+    </div>
+    <!--region Info-->
+    <div class="container">
+        <p><a name="info"></a></p>
+        <h1 href="">Information</h1>
+        <hr>
+        <div class="container">
+            <p>Author: <a href="https://github.com/Vladimir-Ivanov-Git"
+                          target="_blank">Vladimir Ivanov</a>
+            </p>
+
+            <p>Official repo in GitHub: <a href="https://github.com/Vladimir-Ivanov-Git/raw-packet"
+                                           target="_blank">https://github.com/Vladimir-Ivanov-Git/raw-packet</a>
+            </p>
+
+            <p>Some script of this project does not work: <a
+                    href="https://github.com/Vladimir-Ivanov-Git/raw-packet/issues/new"
+                    target="_blank">new issue</a>
+            </p>
+
+            <p>Current project version: <a href="https://github.com/Vladimir-Ivanov-Git/raw-packet"
+                                           target="_blank">0.0.4</a>
+            </p>
+
+            <p>Last stable release: <a href="https://github.com/Vladimir-Ivanov-Git/raw-packet/releases/tag/0.0.3"
+                                       target="_blank">0.0.3</a>
+            </p>
+
+            <p>Required OS: <a href="https://en.wikipedia.org/wiki/Linux"
+                               target="_blank">Linux based</a>
+            </p>
+
+            <p>Python version: <a href="https://www.python.org/download/releases/2.7/"
+                                  target="_blank">2.7</a>
+            </p>
+
+            <p>Scapy version: <a href="https://scapy.net"
+                                 target="_blank">2.3.1</a>
+            </p>
+
+            <p>License: <a href="https://github.com/Vladimir-Ivanov-Git/raw-packet/blob/master/LICENSE"
+                           target="_blank">The Unlicense</a>
+            </p>
+
+            <p>Scripts in <a href="https://github.com/Vladimir-Ivanov-Git/raw-packet"
+                             target="_blank">raw-packet project</a>
+                works normally only in Linux based platform with root privileges,
+                because they work with a raw socket.
+            </p>
+        </div>
+    </div>
+    <!--endregion-->
+
+    <!--region Install-->
+    <div class="container">
+        <p><a name="install"></a></p>
+        <br>
+        <h1>Install</h1>
+        <hr>
+
+        <div class="container">
+            <br>
+            <p>Ubuntu based OS install with apt (recommended):</p>
+            <pre><code class="language-bash">sudo apt update
+sudo apt install python python-scapy python-netifaces python-ipaddress python-netaddr python-libnmap
+sudo apt install apache2 arp-scan nmap
+git clone https://github.com/Vladimir-Ivanov-Git/raw-packet
+cd ./raw-packet</code></pre>
+        </div>
+
+        <div class="container">
+            <br>
+            <p>Ubuntu based OS install with pip:</p>
+            <pre><code class="language-bash">sudo apt update
+sudo apt install python python-pip apache2 arp-scan nmap
+git clone https://github.com/Vladimir-Ivanov-Git/raw-packet
+cd ./raw-packet
+sudo pip install -r requirements.txt</code></pre>
+        </div>
+    </div>
+    <!--endregion-->
+
+    <!--region Scripts-->
+    <div class="container">
+        <p><a name="scripts"></a></p>
+        <br>
+        <h1>Scripts</h1>
+        <hr>
+
+        <!--region DHCP Scripts-->
+        <div class="container">
+            <p><a name="dhcp_scripts"></a></p>
+            <br>
+            <h2>
+                <a href="https://github.com/Vladimir-Ivanov-Git/raw-packet/tree/master/Scripts/DHCP"
+                   target="_blank">DHCP</a>
+            </h2>
+            <hr>
+
+            <!--region DHCP starvation-->
+            <div class="container">
+                <p><a name="dhcp_starvation"></a></p>
+                <br>
+                <h3>
+                    Script: <a
+                        href="https://github.com/Vladimir-Ivanov-Git/raw-packet/blob/master/Scripts/DHCP/dhcp_starvation.py"
+                        target="_blank">dhcp_starvation.py</a>
+                </h3>
+                <hr>
+                <p>This script implement the attack - <a
+                        href="https://www.sciencedirect.com/science/article/pii/S0045790612001140"
+                        target="_blank">DHCP starvation</a></p>
+                <p>DHCP starvation attack is an attack that targets DHCP servers whereby forged DHCP requests are
+                    crafted by an attacker with the intent of exhausting all available IP addresses that can be
+                    allocated by the DHCP server.</p>
+                <pre><code class="language-markup">root@kali:~/raw-packet# ./Scripts/DHCP/dhcp_starvation.py -h
+usage: dhcp_starvation.py [-h] [-i INTERFACE] [-d DELAY] [-t TIMEOUT] [-n]
+                          [-v DHCP_OPTION_VALUE] [-c DHCP_OPTION_CODE] [-f]
+                          [-m]
+
+DHCP Starvation attack script
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INTERFACE, --interface INTERFACE
+                        Set interface name for send discover packets
+  -d DELAY, --delay DELAY
+                        Set delay time in seconds (default: 1)
+  -t TIMEOUT, --timeout TIMEOUT
+                        Set receiving timeout in seconds (default: 10)
+  -n, --not_send_hostname
+                        Do not send hostname in DHCP request
+  -v DHCP_OPTION_VALUE, --dhcp_option_value DHCP_OPTION_VALUE
+                        Set DHCP option value
+  -c DHCP_OPTION_CODE, --dhcp_option_code DHCP_OPTION_CODE
+                        Set DHCP option code (default: 12)
+  -f, --find_dhcp       Only find DHCP server in your network
+  -m, --mac_change      Use mac change technique</code></pre>
+                <br><h4>Demo video:</h4>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ig5-dRv2NCI?rel=0"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <!--endregion-->
+
+            <!--region DHCP rogue server-->
+            <div class="container">
+                <p><a name="dhcp_rogue_server"></a></p>
+                <br>
+                <h3>
+                    Script: <a
+                        href="https://github.com/Vladimir-Ivanov-Git/raw-packet/blob/master/Scripts/DHCP/dhcp_rogue_server.py"
+                        target="_blank">dhcp_rogue_server.py</a>
+                </h3>
+                <hr>
+                <p>Данный скрипт производит атаку на DHCP-клиентов путем подмены легитимного DHCP-сервера (Rogue
+                    DHCP).</p>
+                <pre><code class="language-markup">root@kali:~/raw-packet# ./dhcp_rogue_server.py -h
+usage: dhcp_rogue_server.py [-h] [-i INTERFACE] [-f FIRST_OFFER_IP]
+                            [-l LAST_OFFER_IP] [-t TARGET_MAC] [-I TARGET_IP]
+                            [-q] [--apple] [--broadcast_response] [--force]
+                            [--not_exit] [-c SHELLSHOCK_COMMAND] [-b]
+                            [-p BIND_PORT] [-N] [-E] [-R] [-e REVERSE_PORT]
+                            [-n] [-B] [-O SHELLSHOCK_OPTION_CODE]
+                            [--ip_path IP_PATH] [--iface_name IFACE_NAME]
+                            [--dhcp_mac DHCP_MAC] [--dhcp_ip DHCP_IP]
+                            [--router ROUTER] [--netmask NETMASK]
+                            [--broadcast BROADCAST] [--dns DNS]
+                            [--lease_time LEASE_TIME] [--domain DOMAIN]
+                            [--proxy PROXY] [--tftp TFTP]
+
+DHCP Rogue server
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INTERFACE, --interface INTERFACE
+                        Set interface name for send reply packets
+  -f FIRST_OFFER_IP, --first_offer_ip FIRST_OFFER_IP
+                        Set first client ip for offering
+  -l LAST_OFFER_IP, --last_offer_ip LAST_OFFER_IP
+                        Set last client ip for offering
+  -t TARGET_MAC, --target_mac TARGET_MAC
+                        Set target MAC address
+  -I TARGET_IP, --target_ip TARGET_IP
+                        Set client IP address with MAC in --target_mac
+  -q, --quiet           Minimal output
+  --apple               Apple devices MiTM
+  --broadcast_response  Send broadcast response
+  --force               For new client or client after DHCP DECLINE
+  --not_exit            Not exit on success MiTM attack
+  -c SHELLSHOCK_COMMAND, --shellshock_command SHELLSHOCK_COMMAND
+                        Set shellshock command in DHCP client
+  -b, --bind_shell      Use awk bind tcp shell in DHCP client
+  -p BIND_PORT, --bind_port BIND_PORT
+                        Set port for listen bind shell (default=1234)
+  -N, --nc_reverse_shell
+                        Use nc reverse tcp shell in DHCP client
+  -E, --nce_reverse_shell
+                        Use nc -e reverse tcp shell in DHCP client
+  -R, --bash_reverse_shell
+                        Use bash reverse tcp shell in DHCP client
+  -e REVERSE_PORT, --reverse_port REVERSE_PORT
+                        Set port for listen bind shell (default=443)
+  -n, --without_network
+                        Do not add network configure in payload
+  -B, --without_base64  Do not use base64 encode in payload
+  -O SHELLSHOCK_OPTION_CODE, --shellshock_option_code SHELLSHOCK_OPTION_CODE
+                        Set dhcp option code for inject shellshock payload,
+                        default=114
+  --ip_path IP_PATH     Set path to "ip" in shellshock payload, default =
+                        /bin/
+  --iface_name IFACE_NAME
+                        Set iface name in shellshock payload, default = eth0
+  --dhcp_mac DHCP_MAC   Set DHCP server MAC address, if not set use your MAC
+                        address
+  --dhcp_ip DHCP_IP     Set DHCP server IP address, if not set use your IP
+                        address
+  --router ROUTER       Set router IP address, if not set use your ip address
+  --netmask NETMASK     Set network mask, if not set use your netmask
+  --broadcast BROADCAST
+                        Set network broadcast, if not set use your broadcast
+  --dns DNS             Set DNS server IP address, if not set use your ip
+                        address
+  --lease_time LEASE_TIME
+                        Set lease time, default=172800
+  --domain DOMAIN       Set domain name for search, default=test.com
+  --proxy PROXY         Set proxy server IP address
+  --tftp TFTP           Set TFTP server IP address</code></pre>
+                <br><h4>Demo video:</h4>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OBXol-o2PEU?rel=0"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <!--endregion-->
+
+        </div>
+        <!--endregion-->
+
+        <!--region Apple Scripts-->
+        <div class="container">
+            <p><a name="apple_scripts"></a></p>
+            <br>
+            <h2>
+                <a href="https://github.com/Vladimir-Ivanov-Git/raw-packet/tree/master/Scripts/Apple"
+                   target="_blank">Apple</a>
+            </h2>
+            <hr>
+
+            <!--region Apple DHCP mitm-->
+            <div class="container">
+                <p><a name="apple_dhcp_mitm"></a></p>
+                <br>
+                <h3>
+                    Script: <a
+                        href="https://github.com/Vladimir-Ivanov-Git/raw-packet/blob/master/Scripts/Apple/apple_dhcp_mitm.py"
+                        target="_blank">apple_dhcp_mitm.py</a>
+                </h3>
+                <hr>
+                <p>Данный скрипт в автоматическом режиме обнаруживает Apple устройства в сети и с помощью протокола DHCP
+                    изменяет IP-адреса маршрутизатора и DNS-сервера на всех устройствах на ваш IP-адрес.</p>
+                <pre><code class="language-markup">root@kali:~/raw-packet# ./apple_dhcp_mitmer.py -h
+usage: apple_dhcp_mitmer.py [-h] [-i LISTEN_IFACE] [-r AIREPLAY_IFACE]
+                            [-d DEAUTH]
+
+Apple DHCP MiTM creator
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i LISTEN_IFACE, --listen_iface LISTEN_IFACE
+                        Set interface name for send DHCPACK packets
+  -c, --use_network_conflict
+                        Use network conflict technique
+  -r AIREPLAY_IFACE, --aireplay_iface AIREPLAY_IFACE
+                        Set interface name for aireplay
+  -d DEAUTH, --deauth DEAUTH
+                        Set number of deauth packets (dafault=35)</code></pre>
+                <br><h4>Demo video with deauth packets technique:</h4>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MmPluMxOyMk?rel=0"
+                            allowfullscreen></iframe>
+                </div>
+                <br><h4>Demo video with network conflict technique:</h4>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-vg2gNiQ53s?rel=0"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <!--endregion-->
+
+        </div>
+        <!--endregion-->
+
+        <!--region Binary Exploits-->
+        <div class="container">
+            <p><a name="binary_exploits"></a></p>
+            <br>
+            <h2>
+                <a href="https://github.com/Vladimir-Ivanov-Git/raw-packet/tree/master/Scripts/Binary"
+                   target="_blank">Binary Exploits</a>
+            </h2>
+            <hr>
+
+            <!--region Dnsmasploit-->
+            <div class="container">
+                <p><a name="dnsmasploit"></a></p>
+                <br>
+                <h3>
+                    Script: <a
+                        href="https://github.com/Vladimir-Ivanov-Git/raw-packet/blob/master/Scripts/Binary/dnsmasploit.py"
+                        target="_blank">dnsmasploit.py</a>
+                </h3>
+                <hr>
+                <p>Данный скрипт предназначен для эксплуатации уязвимостей CVE-2017-14493 и CVE-2017-14494.</p>
+                <pre><code class="language-markup">root@kali:~/raw-packet# ./dnsmasploit.py -h
+usage: dnsmasploit.py [-h] [-i INTERFACE] [-e] [-l] [-f FILE_NAME] -t TARGET
+                      [-p TARGET_PORT] [-a ARCHITECTURE] [-v VERSION]
+                      [--interpreter INTERPRETER]
+                      [--interpreter_arg INTERPRETER_ARG] [--payload PAYLOAD]
+                      [--command COMMAND] [--bind_port BIND_PORT]
+                      [--reverse_port REVERSE_PORT]
+                      [--reverse_host REVERSE_HOST]
+
+Exploit for dnsmasq CVE-2017-14493 and CVE-2017-14494
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INTERFACE, --interface INTERFACE
+                        Set interface name for send packets
+  -e, --exploit         Exploit (CVE-2017-14493) works only if Stack cookie
+                        and PIE disabled
+  -l, --data_leak       Data leakage (CVE-2017-14494)
+  -f FILE_NAME, --file_name FILE_NAME
+                        Set file name for leak data
+  -t TARGET, --target TARGET
+                        Set target IPv6 address
+  -p TARGET_PORT, --target_port TARGET_PORT
+                        Set target port, default=547
+  -a ARCHITECTURE, --architecture ARCHITECTURE
+                        Set architecture (i386, amd64 or arm), default=i386
+  -v VERSION, --version VERSION
+                        Set dnsmasq version (2.70, 2.71, 2.72, 2.73, 2.74,
+                        2.75, 2.76, 2.77), default=2.77
+  --interpreter INTERPRETER
+                        Set path to interpreter on target, default="/bin/bash"
+  --interpreter_arg INTERPRETER_ARG
+                        Set interpreter argument, default="-c"
+  --payload PAYLOAD     Set payload (bind_awk, reverse_awk, reverse_bash,
+                        reverse_php, reverse_nc, reverse_nce),
+                        default=reverse_nc
+  --command COMMAND     Set command for executing on target
+  --bind_port BIND_PORT
+                        Set bind port, default=4444
+  --reverse_port REVERSE_PORT
+                        Set reverse port, default=4444
+  --reverse_host REVERSE_HOST
+                        Set reverse host</code></pre>
+
+                <br>
+                <h4>Demo video exploit for CVE-2017-14493:</h4>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VWr0zCZlMrE?rel=0"
+                            allowfullscreen></iframe>
+                </div>
+
+                <br>
+                <h4>Demo video exploit for CVE-2017-14494:</h4>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GqMuZ1wMCWQ?rel=0"
+                            allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <!--endregion-->
+
+        </div>
+        <!--endregion-->
+
+    </div>
+    <!--endregion-->
+
+</div>
+<!--endregion-->
+
+<!--region JS-->
+<script>
+    /* PrismJS 1.15.0
+    https://prismjs.com/download.html?#themes=prism-okaidia&languages=markup+bash&plugins=line-numbers+file-highlight */
+    var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-([\w-]+)\b/i,t=0,n=_self.Prism={manual:_self.Prism&&_self.Prism.manual,disableWorkerMessageHandler:_self.Prism&&_self.Prism.disableWorkerMessageHandler,util:{encode:function(e){return e instanceof r?new r(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e,t){var r=n.util.type(e);switch(t=t||{},r){case"Object":if(t[n.util.objId(e)])return t[n.util.objId(e)];var a={};t[n.util.objId(e)]=a;for(var l in e)e.hasOwnProperty(l)&&(a[l]=n.util.clone(e[l],t));return a;case"Array":if(t[n.util.objId(e)])return t[n.util.objId(e)];var a=[];return t[n.util.objId(e)]=a,e.forEach(function(e,r){a[r]=n.util.clone(e,t)}),a}return e}},languages:{extend:function(e,t){var r=n.util.clone(n.languages[e]);for(var a in t)r[a]=t[a];return r},insertBefore:function(e,t,r,a){a=a||n.languages;var l=a[e];if(2==arguments.length){r=arguments[1];for(var i in r)r.hasOwnProperty(i)&&(l[i]=r[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in r)r.hasOwnProperty(i)&&(o[i]=r[i]);o[s]=l[s]}var u=a[e];return a[e]=o,n.languages.DFS(n.languages,function(t,n){n===u&&t!=e&&(this[t]=o)}),o},DFS:function(e,t,r,a){a=a||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],r||l),"Object"!==n.util.type(e[l])||a[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||a[n.util.objId(e[l])]||(a[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,a)):(a[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,a)))}},plugins:{},highlightAll:function(e,t){n.highlightAllUnder(document,e,t)},highlightAllUnder:function(e,t,r){var a={callback:r,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var l,i=a.elements||e.querySelectorAll(a.selector),o=0;l=i[o++];)n.highlightElement(l,t===!0,a.callback)},highlightElement:function(t,r,a){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1].toLowerCase(),i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,t.parentNode&&(o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l));var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(n.hooks.run("before-sanity-check",u),!u.code||!u.grammar)return u.code&&(n.hooks.run("before-highlight",u),u.element.textContent=u.code,n.hooks.run("after-highlight",u)),n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),r&&_self.Worker){var g=new Worker(n.filename);g.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,a&&a.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},g.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,a&&a.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,a){var l={code:e,grammar:t,language:a};return n.hooks.run("before-tokenize",l),l.tokens=n.tokenize(l.code,l.grammar),n.hooks.run("after-tokenize",l),r.stringify(n.util.encode(l.tokens),l.language)},matchGrammar:function(e,t,r,a,l,i,o){var s=n.Token;for(var u in r)if(r.hasOwnProperty(u)&&r[u]){if(u==o)return;var g=r[u];g="Array"===n.util.type(g)?g:[g];for(var c=0;c<g.length;++c){var h=g[c],f=h.inside,d=!!h.lookbehind,m=!!h.greedy,p=0,y=h.alias;if(m&&!h.pattern.global){var v=h.pattern.toString().match(/[imuy]*$/)[0];h.pattern=RegExp(h.pattern.source,v+"g")}h=h.pattern||h;for(var b=a,k=l;b<t.length;k+=t[b].length,++b){var w=t[b];if(t.length>e.length)return;if(!(w instanceof s)){if(m&&b!=t.length-1){h.lastIndex=k;var _=h.exec(e);if(!_)break;for(var j=_.index+(d?_[1].length:0),P=_.index+_[0].length,A=b,x=k,O=t.length;O>A&&(P>x||!t[A].type&&!t[A-1].greedy);++A)x+=t[A].length,j>=x&&(++b,k=x);if(t[b]instanceof s)continue;I=A-b,w=e.slice(k,x),_.index-=k}else{h.lastIndex=0;var _=h.exec(w),I=1}if(_){d&&(p=_[1]?_[1].length:0);var j=_.index+p,_=_[0].slice(p),P=j+_.length,N=w.slice(0,j),S=w.slice(P),C=[b,I];N&&(++b,k+=N.length,C.push(N));var E=new s(u,f?n.tokenize(_,f):_,y,_,m);if(C.push(E),S&&C.push(S),Array.prototype.splice.apply(t,C),1!=I&&n.matchGrammar(e,t,r,b,k,!0,u),i)break}else if(i)break}}}}},tokenize:function(e,t){var r=[e],a=t.rest;if(a){for(var l in a)t[l]=a[l];delete t.rest}return n.matchGrammar(e,r,t,0,0,!1),r},hooks:{all:{},add:function(e,t){var r=n.hooks.all;r[e]=r[e]||[],r[e].push(t)},run:function(e,t){var r=n.hooks.all[e];if(r&&r.length)for(var a,l=0;a=r[l++];)a(t)}}},r=n.Token=function(e,t,n,r,a){this.type=e,this.content=t,this.alias=n,this.length=0|(r||"").length,this.greedy=!!a};if(r.stringify=function(e,t,a){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return r.stringify(n,t,e)}).join("");var l={type:e.type,content:r.stringify(e.content,t,a),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:a};if(e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o=Object.keys(l.attributes).map(function(e){return e+'="'+(l.attributes[e]||"").replace(/"/g,"&quot;")+'"'}).join(" ");return"<"+l.tag+' class="'+l.classes.join(" ")+'"'+(o?" "+o:"")+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(n.disableWorkerMessageHandler||_self.addEventListener("message",function(e){var t=JSON.parse(e.data),r=t.language,a=t.code,l=t.immediateClose;_self.postMessage(n.highlight(a,n.languages[r],r)),l&&_self.close()},!1),_self.Prism):_self.Prism;var a=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return a&&(n.filename=a.src,n.manual||a.hasAttribute("data-manual")||("loading"!==document.readyState?window.requestAnimationFrame?window.requestAnimationFrame(n.highlightAll):window.setTimeout(n.highlightAll,16):document.addEventListener("DOMContentLoaded",n.highlightAll))),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+    Prism.languages.markup={comment:/<!--[\s\S]*?-->/,prolog:/<\?[\s\S]+?\?>/,doctype:/<!DOCTYPE[\s\S]+?>/i,cdata:/<!\[CDATA\[[\s\S]*?]]>/i,tag:{pattern:/<\/?(?!\d)[^\s>\/=$<%]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i,greedy:!0,inside:{tag:{pattern:/^<\/?[^\s>\/]+/i,inside:{punctuation:/^<\/?/,namespace:/^[^\s>\/:]+:/}},"attr-value":{pattern:/=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+)/i,inside:{punctuation:[/^=/,{pattern:/(^|[^\\])["']/,lookbehind:!0}]}},punctuation:/\/?>/,"attr-name":{pattern:/[^\s>\/]+/,inside:{namespace:/^[^\s>\/:]+:/}}}},entity:/&#?[\da-z]{1,8};/i},Prism.languages.markup.tag.inside["attr-value"].inside.entity=Prism.languages.markup.entity,Prism.hooks.add("wrap",function(a){"entity"===a.type&&(a.attributes.title=a.content.replace(/&amp;/,"&"))}),Prism.languages.xml=Prism.languages.markup,Prism.languages.html=Prism.languages.markup,Prism.languages.mathml=Prism.languages.markup,Prism.languages.svg=Prism.languages.markup;
+    !function(e){var t={variable:[{pattern:/\$?\(\([\s\S]+?\)\)/,inside:{variable:[{pattern:/(^\$\(\([\s\S]+)\)\)/,lookbehind:!0},/^\$\(\(/],number:/\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee]-?\d+)?/,operator:/--?|-=|\+\+?|\+=|!=?|~|\*\*?|\*=|\/=?|%=?|<<=?|>>=?|<=?|>=?|==?|&&?|&=|\^=?|\|\|?|\|=|\?|:/,punctuation:/\(\(?|\)\)?|,|;/}},{pattern:/\$\([^)]+\)|`[^`]+`/,greedy:!0,inside:{variable:/^\$\(|^`|\)$|`$/}},/\$(?:[\w#?*!@]+|\{[^}]+\})/i]};e.languages.bash={shebang:{pattern:/^#!\s*\/bin\/bash|^#!\s*\/bin\/sh/,alias:"important"},comment:{pattern:/(^|[^"{\\])#.*/,lookbehind:!0},string:[{pattern:/((?:^|[^<])<<\s*)["']?(\w+?)["']?\s*\r?\n(?:[\s\S])*?\r?\n\2/,lookbehind:!0,greedy:!0,inside:t},{pattern:/(["'])(?:\\[\s\S]|\$\([^)]+\)|`[^`]+`|(?!\1)[^\\])*\1/,greedy:!0,inside:t}],variable:t.variable,"function":{pattern:/(^|[\s;|&])(?:alias|apropos|apt-get|aptitude|aspell|awk|basename|bash|bc|bg|builtin|bzip2|cal|cat|cd|cfdisk|chgrp|chmod|chown|chroot|chkconfig|cksum|clear|cmp|comm|command|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|du|egrep|eject|enable|env|ethtool|eval|exec|expand|expect|export|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|getopts|git|grep|groupadd|groupdel|groupmod|groups|gzip|hash|head|help|hg|history|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|jobs|join|kill|killall|less|link|ln|locate|logname|logout|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|make|man|mkdir|mkfifo|mkisofs|mknod|more|most|mount|mtools|mtr|mv|mmv|nano|netstat|nice|nl|nohup|notify-send|npm|nslookup|open|op|passwd|paste|pathchk|ping|pkill|popd|pr|printcap|printenv|printf|ps|pushd|pv|pwd|quota|quotacheck|quotactl|ram|rar|rcp|read|readarray|readonly|reboot|rename|renice|remsync|rev|rm|rmdir|rsync|screen|scp|sdiff|sed|seq|service|sftp|shift|shopt|shutdown|sleep|slocate|sort|source|split|ssh|stat|strace|su|sudo|sum|suspend|sync|tail|tar|tee|test|time|timeout|times|touch|top|traceroute|trap|tr|tsort|tty|type|ulimit|umask|umount|unalias|uname|unexpand|uniq|units|unrar|unshar|uptime|useradd|userdel|usermod|users|uuencode|uudecode|v|vdir|vi|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yes|zip)(?=$|[\s;|&])/,lookbehind:!0},keyword:{pattern:/(^|[\s;|&])(?:let|:|\.|if|then|else|elif|fi|for|break|continue|while|in|case|function|select|do|done|until|echo|exit|return|set|declare)(?=$|[\s;|&])/,lookbehind:!0},"boolean":{pattern:/(^|[\s;|&])(?:true|false)(?=$|[\s;|&])/,lookbehind:!0},operator:/&&?|\|\|?|==?|!=?|<<<?|>>|<=?|>=?|=~/,punctuation:/\$?\(\(?|\)\)?|\.\.|[{}[\];]/};var a=t.variable[1].inside;a.string=e.languages.bash.string,a["function"]=e.languages.bash["function"],a.keyword=e.languages.bash.keyword,a["boolean"]=e.languages.bash["boolean"],a.operator=e.languages.bash.operator,a.punctuation=e.languages.bash.punctuation,e.languages.shell=e.languages.bash}(Prism);
+    !function(){if("undefined"!=typeof self&&self.Prism&&self.document){var e="line-numbers",t=/\n(?!$)/g,n=function(e){var n=r(e),s=n["white-space"];if("pre-wrap"===s||"pre-line"===s){var l=e.querySelector("code"),i=e.querySelector(".line-numbers-rows"),a=e.querySelector(".line-numbers-sizer"),o=l.textContent.split(t);a||(a=document.createElement("span"),a.className="line-numbers-sizer",l.appendChild(a)),a.style.display="block",o.forEach(function(e,t){a.textContent=e||"\n";var n=a.getBoundingClientRect().height;i.children[t].style.height=n+"px"}),a.textContent="",a.style.display="none"}},r=function(e){return e?window.getComputedStyle?getComputedStyle(e):e.currentStyle||null:null};window.addEventListener("resize",function(){Array.prototype.forEach.call(document.querySelectorAll("pre."+e),n)}),Prism.hooks.add("complete",function(e){if(e.code){var r=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(r&&/pre/i.test(r.nodeName)&&(s.test(r.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s," ")),s.test(r.className)||(r.className+=" line-numbers");var l,i=e.code.match(t),a=i?i.length+1:1,o=new Array(a+1);o=o.join("<span></span>"),l=document.createElement("span"),l.setAttribute("aria-hidden","true"),l.className="line-numbers-rows",l.innerHTML=o,r.hasAttribute("data-start")&&(r.style.counterReset="linenumber "+(parseInt(r.getAttribute("data-start"),10)-1)),e.element.appendChild(l),n(r),Prism.hooks.run("line-numbers",e)}}}),Prism.hooks.add("line-numbers",function(e){e.plugins=e.plugins||{},e.plugins.lineNumbers=!0}),Prism.plugins.lineNumbers={getLine:function(t,n){if("PRE"===t.tagName&&t.classList.contains(e)){var r=t.querySelector(".line-numbers-rows"),s=parseInt(t.getAttribute("data-start"),10)||1,l=s+(r.children.length-1);s>n&&(n=s),n>l&&(n=l);var i=n-s;return r.children[i]}}}}}();
+    !function(){"undefined"!=typeof self&&self.Prism&&self.document&&document.querySelector&&(self.Prism.fileHighlight=function(){var t={js:"javascript",py:"python",rb:"ruby",ps1:"powershell",psm1:"powershell",sh:"bash",bat:"batch",h:"c",tex:"latex"};Array.prototype.slice.call(document.querySelectorAll("pre[data-src]")).forEach(function(e){for(var a,n=e.getAttribute("data-src"),r=e,o=/\blang(?:uage)?-([\w-]+)\b/i;r&&!o.test(r.className);)r=r.parentNode;if(r&&(a=(e.className.match(o)||[,""])[1]),!a){var s=(n.match(/\.(\w+)$/)||[,""])[1];a=t[s]||s}var l=document.createElement("code");l.className="language-"+a,e.textContent="",l.textContent="Loading…",e.appendChild(l);var i=new XMLHttpRequest;i.open("GET",n,!0),i.onreadystatechange=function(){4==i.readyState&&(i.status<400&&i.responseText?(l.textContent=i.responseText,Prism.highlightElement(l)):l.textContent=i.status>=400?"✖ Error "+i.status+" while fetching file: "+i.statusText:"✖ Error: File does not exist or is empty")},i.send(null)}),Prism.plugins.toolbar&&Prism.plugins.toolbar.registerButton("download-file",function(t){var e=t.element.parentNode;if(e&&/pre/i.test(e.nodeName)&&e.hasAttribute("data-src")&&e.hasAttribute("data-download-link")){var a=e.getAttribute("data-src"),n=document.createElement("a");return n.textContent=e.getAttribute("data-download-link-label")||"Download",n.setAttribute("download",""),n.href=a,n}})},document.addEventListener("DOMContentLoaded",self.Prism.fileHighlight))}();
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+<script src="/static/js/custom.js"></script>
+<!--endregion-->
+
+</body>
