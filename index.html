@@ -186,8 +186,8 @@
             <br>
             <p>Ubuntu based OS install with apt (recommended):</p>
             <pre><code class="language-bash">sudo apt update
-sudo apt install python python-scapy python-netifaces python-ipaddress python-netaddr python-libnmap
-sudo apt install apache2 arp-scan nmap
+sudo apt install python python-pip python-scapy python-netifaces python-ipaddress python-netaddr python-psutil
+sudo apt install apache2 php lsof net-tools wireless-tools arp-scan nmap aircrack-ng
 git clone https://github.com/raw-packet/raw-packet
 cd ./raw-packet</code></pre>
         </div>
@@ -196,7 +196,8 @@ cd ./raw-packet</code></pre>
             <br>
             <p>Ubuntu based OS install with pip:</p>
             <pre><code class="language-bash">sudo apt update
-sudo apt install python python-pip apache2 arp-scan nmap
+sudo apt install python python-pip apache2 php lsof net-tools wireless-tools
+sudo apt install arp-scan nmap aircrack-ng
 git clone https://github.com/raw-packet/raw-packet
 cd ./raw-packet
 sudo pip install -r requirements.txt</code></pre>
