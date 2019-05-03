@@ -5,3 +5,7 @@ nav_order: 2
 has_children: true
 permalink: /scripts
 ---
+
+Here is a documentation for the scripts. These scripts implement various simple servers, attack techniques, and some exploits.
+
+At the moment there are scripts to work with some network protocols and attacks on them (ARP, DHCP, ICMPv6, DNS). Also scripts for attacking Apple devices (MacBook, iPhone, etc...). And besides, there is a script for exploiting dnsmasq (DNS server) vulnerabilities. All scripts use the core of the project.
