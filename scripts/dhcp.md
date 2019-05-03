@@ -39,7 +39,7 @@ optional arguments:
   -m, --mac_change      Use mac change technique
 ```
 
-**Demo video:**
+### Demo video:
 [![DHCP Starvation demo video](https://raw-packet.github.io/static/images/gifs/dhcp_starvation.gif)](https://youtu.be/Ig5-dRv2NCI)
 
 ---
@@ -122,7 +122,7 @@ optional arguments:
   --tftp TFTP           Set TFTP server IP address
 ```
 
-**Demo video:**
+### Demo video:
 [![DHCP Rogue server preview](https://j.gifs.com/2R6OEz.gif)](https://youtu.be/OBXol-o2PEU)
 
 ---
