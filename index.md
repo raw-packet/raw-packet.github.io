@@ -17,7 +17,7 @@ nav_order: 0
 ---
 
 ## Description 
-This project implements... bla bla bla bla bla
+This project implements network protocols such as Ethernet ARP IP IPv6 UDP TCP DNS MDNS DHCP DHCPv6 ICMPv6  on raw socket.
 
 ## Disclaimer
 This project is created only for educational purposes and can not be used for law violation or personal gain. The author of this project is not responsible for any possible harm caused by the materials of this project.
