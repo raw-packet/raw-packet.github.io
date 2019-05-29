@@ -7,7 +7,7 @@ title: Home
 nav_order: 0
 ---
 
-![logo](https://camo.githubusercontent.com/785e76091fe56b85124a3147d70bea8cefb000ef/68747470733a2f2f7261772d7061636b65742e6769746875622e696f2f7374617469632f696d616765732f6c6f676f2f6c6f676f2d63617074696f6e2e706e67){:height="300px" width="600px"}
+![logo](https://raw-packet.github.io/static/images/logo/logo-caption.png)
 
 ## **Raw socket programming** 
 [View on GitHub](https://github.com/raw-packet/raw-packet){: .btn .btn-purple }
