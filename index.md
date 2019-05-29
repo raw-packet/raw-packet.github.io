@@ -58,8 +58,12 @@ Our testing you can see bellow
 | ARP requests in Raw-packet (sec)           | 0,00202298164368  | 0,00270104408264 | 0,090922832489  | 1,3037519455  |
 | DHCP discover requests in Scapy (sec)      | 0,397399187088    | 4,16092181206    | 39,5892789364   |       -       |
 | DHCP discover requests in Raw-packet (sec) | 0,00177597999573  | 0,0219049453735  | 0,162989854813  |       -       |
+| DNS requests in Scapy                      | 0.608256101608    | 6.05325508118    |  58.4151289463  |       -       |
+| DNS requests in Raw-packet                 | 0.00274395942688  | 0.0127770900726  | 0.0796978473663 |       -       |
 
 
-![test1](https://camo.githubusercontent.com/87926cc842d95a63efc7808322ab6080d6a9660e/68747470733a2f2f7261772d7061636b65742e6769746875622e696f2f7374617469632f696d616765732f6f74686572732f4152505f72657175657374735f74696d696e672e706e67)
+![Scapy vs. Raw-packet ARP requests](https://raw-packet.github.io/static/images/others/ARP_requests_timing.png)
 
-![test2](https://camo.githubusercontent.com/fa2d9d5f056bd304ea602767fb77000facf185c6/68747470733a2f2f7261772d7061636b65742e6769746875622e696f2f7374617469632f696d616765732f6f74686572732f444843505f646973636f7665725f72657175657374735f74696d696e672e706e67)
+![Scapy vs. Raw-packet DHCP discover requests](https://raw-packet.github.io/static/images/others/DHCP_discover_requests_timing.png)
+
+![Scapy vs. Raw-packet DNS requests](https://raw-packet.github.io/static/images/others/DNS_requests_timing.png)
