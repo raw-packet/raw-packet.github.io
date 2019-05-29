@@ -28,6 +28,8 @@ This project is created only for educational purposes and can not be used for la
 
 - [Apple security updates](https://support.apple.com/en-us/HT209341)
 
+- [PHDays: Apple, all about MiTM](https://www.phdays.com/en/program/reports/apple-all-about-mitm/)
+
 - [Yandex IT SEC 2018: Apple vs DHCP](https://events.yandex.ru/lib/talks/5519/)
 
 - [Xakep.ru: Advanced Wi-Fi MiTM](https://xakep.ru/2017/09/25/wifi-mitm-advanced/)
