@@ -9,7 +9,7 @@ parent: Scripts
 
 The [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) is a network management protocol used on UDP/IP networks whereby a DHCP server dynamically assigns an IP address and other network configuration parameters to each device on a network so they can communicate with other IP networks.
 
-## [dhcp_starvation.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/DHCP/dhcp_starvation.py)
+## Script: [dhcp_starvation.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/DHCP/dhcp_starvation.py)
 
 This script implement the attack - DHCP starvation.
 DHCP starvation attack is an attack that targets DHCP servers whereby forged DHCP requests are crafted by an attacker with the intent of exhausting all available IP addresses that can be allocated by the DHCP server.
@@ -45,7 +45,7 @@ optional arguments:
 
 ---
 
-## [dhcp_rogue_server.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/DHCP/dhcp_rogue_server.py)
+## Script: [dhcp_rogue_server.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/DHCP/dhcp_rogue_server.py)
 
 This script implements an attack on network clients by using fake DHCP server which answers with malicius configuration faster than legitimate DHCP server. This attack also known as Rogue DHCP Server Attack.
 
@@ -128,7 +128,7 @@ optional arguments:
 
 ---
 
-## [dhcpv6_rogue_server.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/DHCP/dhcpv6_rogue_server.py)
+## Script: [dhcpv6_rogue_server.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/DHCP/dhcpv6_rogue_server.py)
 
 This script implements fake DHCPv6 server for perfom SLAAC attack/Rogue DHCPv6.
 
