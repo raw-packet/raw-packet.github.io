@@ -7,9 +7,9 @@ parent: Scripts
 
 # Miscellaneous scripts
 
-Script for creating network conflicts for varius testing.
+## Script: [network_conflict_creator.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Others/network_conflict_creator.py)
 
-## [network_conflict_creator.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Others/network_conflict_creator.py)
+Script for creating network conflicts for varius testing.
 
 ```
 root@shakal:~/raw-packet# python Scripts/Others/network_conflict_creator.py --help
@@ -36,13 +36,13 @@ optional arguments:
 
 ---
 
-## [sniff_test.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Others/sniff_test.py)
+## Script: [sniff_test.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Others/sniff_test.py)
 
 **Under Construction**
 
 ---
 
-## [time_test.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Others/time_test.py)
+## Script: [time_test.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Others/time_test.py)
 
 **Under Construction**
 
