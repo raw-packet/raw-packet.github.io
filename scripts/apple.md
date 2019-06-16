@@ -7,7 +7,7 @@ parent: Scripts
 
 # Apple attacks
 
-## [apple_mitm.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Apple/apple_mitm.py)
+## Script: [apple_mitm.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Apple/apple_mitm.py)
 
 This script automatically finds Apple devices on the local network using an ARP, NMAP or ICMPv6 scan and implements the MiTM attack with the following techniques:
 1. ARP Spoofing
@@ -67,7 +67,7 @@ optional arguments:
 ---
 
 
-## [apple_arp_dos.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Apple/apple_arp_dos.py)
+## Script: [apple_arp_dos.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Apple/apple_arp_dos.py)
 
 Disconnect Apple device from the local network using ARP packets
 
@@ -88,7 +88,7 @@ optional arguments:
 
 ---
 
-## [apple_rogue_dhcp.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Apple/apple_rogue_dhcp.py)
+## Script: [apple_rogue_dhcp.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Apple/apple_rogue_dhcp.py)
 
 Rogue DHCP server for Apple device with predict next DHCP transaction ID
 
