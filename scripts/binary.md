@@ -7,7 +7,7 @@ parent: Scripts
 
 # Exploits 
 
-## [dnsmasploit.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Binary/dnsmasploit.py)
+## Script: [dnsmasploit.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Binary/dnsmasploit.py)
 
 This script implements an exploit for CVE-2017-14493 and CVE-2017-14494 vulnerabilities in dnsmasq (DNS Server).
 
