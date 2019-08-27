@@ -5,7 +5,6 @@
 layout: home
 title: Home
 nav_order: 0
-<link href="/static/images/logo/apple-touch-icon.png" rel="apple-touch-icon"/>
 ---
 
 ![logo](https://raw-packet.github.io/static/images/logo/logo-caption.png)
