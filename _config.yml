@@ -21,8 +21,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Vladimir-Ivanov-Git
-github_username:  Vova_Ivanov_Ds
+twitter_username: Vova_Ivanov_Ds
+github_username: Vladimir-Ivanov-Git
 
 # Build settings
 markdown: kramdown
@@ -47,3 +47,6 @@ aux_links:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Google Analytics Tracking
+ga_tracking: UA-125485820-1
