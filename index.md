@@ -5,18 +5,9 @@
 layout: home
 title: Home
 nav_order: 0
+ga_tracking: UA-125485820-1
 ---
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125485820-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-125485820-1');
-</script>
-</head>
 
 ![logo](https://raw-packet.github.io/static/images/logo/logo-caption.png)
 
