@@ -13,14 +13,12 @@ Project email: [raw.packet.project@gmail.com](mailto:raw.packet.project@gmail.co
 
 PGP Public key: [raw.packet.project@gmail.com PGP Public key](https://raw-packet.github.io/static/pgp/Raw-packet.asc)
 
-Current project version: [0.0.4](https://github.com/raw-packet/raw-packet)
+Current project version: [0.1.1](https://github.com/raw-packet/raw-packet)
 
-Last stable release: [0.0.3](https://github.com/raw-packet/raw-packet/releases/tag/0.0.3)
+Last stable release: [0.0.4](https://github.com/raw-packet/raw-packet/releases/tag/v0.0.4)
 
 Required OS: [Linux based](https://en.wikipedia.org/wiki/Linux)
 
-Python version: [2.7](https://www.python.org/download/releases/2.7/)
-
-Scapy version: [2.3.1](https://scapy.net/)
+Python versions: [3.7](https://www.python.org/downloads/release/python-374/) or [2.7](https://www.python.org/download/releases/2.7/)
 
 License: [MIT](https://github.com/raw-packet/raw-packet/blob/master/LICENSE)
