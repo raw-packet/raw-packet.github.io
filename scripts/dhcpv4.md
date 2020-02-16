@@ -5,7 +5,7 @@ permalink: /scripts/dhcpv4/
 parent: Scripts
 ---
 
-# DHCP
+# DHCPv4
 
 The [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) is a network management protocol used on UDP/IP networks whereby a DHCP server dynamically assigns an IP address and other network configuration parameters to each device on a network so they can communicate with other IP networks.
 
