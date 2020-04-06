@@ -31,22 +31,40 @@ pip3 install -r requirements.txt
 
 ## MacOS install:
 
-### 1. Install Homebrew:
+#### 1. Install Homebrew:
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### 2. Install/upgrade wireshark and python3:
+#### 2. Install/upgrade wireshark and python3:
 ```
 if brew ls --versions wireshark; then brew upgrade wireshark; else brew install wireshark; fi
 brew cask install wireshark-chmodbpf
 if brew ls --versions python3; then brew upgrade python3; else brew install python3; fi
 ```
 
-### 3. Reboot
+#### 3. Reboot
 
-### 4. Install Raw-packet:
+#### 4. Install Raw-packet:
 ```
 git clone https://github.com/raw-packet/raw-packet && cd ./raw-packet
 pip3 install -r requirements.txt
+```
+
+## Windows install:
+
+#### 1. Install [Wireshark](https://www.wireshark.org/download.html)
+
+#### 2. Install [Python 3.8](https://www.microsoft.com/en-us/p/python-38/9mssztt1n39l)
+
+#### 3. Reboot
+
+#### 4. Download and unpack [Raw-packet](https://github.com/raw-packet/raw-packet/archive/master.zip)
+
+#### 5. Install requirements
+```
+pip3 install --upgrade pip
+pip3 install ifaddr ipaddress netaddr scapy psutil
+pip3 install prettytable distro xmltodict paramiko
+pip3 install npyscreen pycryptodomex getmac colorama
 ```
