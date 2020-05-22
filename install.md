@@ -5,28 +5,12 @@ nav_order: 1
 permalink: /install/
 ---
 
-## Python 3
-
-## Debian based OS install with apt (recommended):
+## Debian based OS install:
 ```
-sudo apt update && sudo apt install -y python3 python3-pip python3-netifaces \
-                                       python-ipaddress python3-netaddr \
-                                       python3-psutil python3-prettytable \
-                                       python3-distro python3-xmltodict \
-                                       python3-paramiko python3-colorama \
-                                       apache2 php lsof net-tools nmap \
-                                       wireless-tools aircrack-ng tshark git
-pip3 install npyscreen scapy pycryptodomex getmac
-git clone https://github.com/raw-packet/raw-packet && cd ./raw-packet
-```
-
-## Debian based OS install with pip:
-```
-sudo apt update && sudo apt install -y python3 python3-pip apache2 php \
-                                       lsof net-tools wireless-tools \
-                                       nmap aircrack-ng tshark git
-git clone https://github.com/raw-packet/raw-packet && cd ./raw-packet
-pip3 install -r requirements.txt
+sudo apt update
+sudo apt install -y python3 python3-pip wireless-tools tshark
+pip3 install --upgrade pip
+sudo pip3 install raw-packet
 ```
 
 ## MacOS install:
@@ -36,19 +20,14 @@ pip3 install -r requirements.txt
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-#### 2. Install/upgrade wireshark and python3:
+#### 2. Adding repository to Homebrew:
 ```
-if brew ls --versions wireshark; then brew upgrade wireshark; else brew install wireshark; fi
-brew cask install wireshark-chmodbpf
-if brew ls --versions python3; then brew upgrade python3; else brew install python3; fi
+brew tap raw-packet/raw-packet
 ```
 
-#### 3. Reboot
-
-#### 4. Install Raw-packet:
+#### 3. Install Raw-packet:
 ```
-git clone https://github.com/raw-packet/raw-packet && cd ./raw-packet
-pip3 install -r requirements.txt
+brew install raw-packet
 ```
 
 ## Windows install:
@@ -57,14 +36,8 @@ pip3 install -r requirements.txt
 
 #### 2. Install [Python 3.8](https://www.microsoft.com/en-us/p/python-38/9mssztt1n39l)
 
-#### 3. Reboot
-
-#### 4. Download and unpack [Raw-packet](https://github.com/raw-packet/raw-packet/archive/master.zip)
-
-#### 5. Install requirements
+#### 3. Install Raw-packet:
 ```
 pip3 install --upgrade pip
-pip3 install ifaddr ipaddress netaddr scapy psutil
-pip3 install prettytable distro xmltodict paramiko
-pip3 install npyscreen pycryptodomex getmac colorama
+pip3 install raw-packet
 ```

@@ -50,7 +50,7 @@ This project is created only for educational purposes and can not be used for la
 
 This project was designed specifically to improve the performance and speed of requests needed for network attacks.
 
-You can compare perfomance of this project with popular python library [SCAPY](https://scapy.net/) via script [time_test.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Others/time_test.py)
+On Linux you can compare perfomance of this project with popular python library [SCAPY](https://scapy.net/) via script [time_test.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/Others/time_test.py)
 
 Our testing you can see bellow
 
