@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ICMPv6
+title: IPv6
 permalink: /scripts/icmpv6/
 parent: Scripts
 ---
@@ -80,6 +80,6 @@ optional arguments:
 ## Neighbor Advertisement spoofing
 
 ### Sample script output:
-![ipv6_spoof_na output](https://raw-packet.github.io/static/images/screenshots/na_spoof.py_screenshot.png)
+![ipv6_spoof_na output](https://raw-packet.github.io/static/images/screenshots/ipv6_spoof_na_screenshot.png)
 
 ---

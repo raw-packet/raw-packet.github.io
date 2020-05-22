@@ -60,14 +60,7 @@ optional arguments:
   -q, --quiet           Minimal output
 ```
 
-## Using two network interfaces
-
 ### Sample script output:
 ![nsc output](https://raw-packet.github.io/static/images/screenshots/nsc_kali_screenshot.png)
-
-## Using test host in local network
-
-### Sample script output:
-![nsc output](https://raw-packet.github.io/static/images/screenshots/nsc_windows_screenshot.png)
 
 ---

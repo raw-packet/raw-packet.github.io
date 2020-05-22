@@ -64,6 +64,6 @@ optional arguments:
 ```
 
 ### Sample script output:
-![arp_spoof.py output](https://raw-packet.github.io/static/images/screenshots/arp_spoof.py_screenshot.png)
+![arp_spoof output](https://raw-packet.github.io/static/images/screenshots/arp_spoof_screenshot.png)
 
 ---
