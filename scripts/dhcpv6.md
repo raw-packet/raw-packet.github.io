@@ -9,18 +9,17 @@ parent: Scripts
 
 The [Dynamic Host Configuration Protocol version 6 (DHCPv6)](https://en.wikipedia.org/wiki/DHCPv6) is a network protocol for configuring Internet Protocol version 6 (IPv6) hosts with IP addresses, IP prefixes and other configuration data required to operate in an IPv6 network. It is the IPv6 equivalent of the Dynamic Host Configuration Protocol for IPv4.
 
-## Script: [dhcpv6_rogue_server.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/DHCP/dhcpv6_rogue_server.py)
+## Script: [dhcpv6_server](https://github.com/raw-packet/raw-packet/blob/master/raw_packet/Scripts/DHCPv6/dhcpv6_server.py)
 
 This script implements fake DHCPv6 server for perfom SLAAC attack/Rogue DHCPv6.
 
 ```
-root@kali:~/raw-packet# python3 Scripts/DHCP/dhcpv6_rogue_server.py --help
-usage: dhcpv6_rogue_server.py [-h] [-i INTERFACE] [-p PREFIX]
-                              [-f FIRST_SUFFIX] [-l LAST_SUFFIX]
-                              [-t TARGET_MAC] [-T TARGET_IPV6] [-D] [-d DNS]
-                              [-s DNS_SEARCH] [--delay DELAY] [-q]
+root@kali:~# dhcpv6_server --help
+usage: dhcpv6_server [-h] [-i INTERFACE] [-p PREFIX] [-f FIRST_SUFFIX] [-l LAST_SUFFIX]
+                     [-t TARGET_MAC] [-T TARGET_IPV6] [-D] [-d DNS] [-s DNS_SEARCH]
+                     [--delay DELAY] [-q]
 
-Rogue SLAAC/DHCPv6 server
+          SLAAC/DHCPv6 server (dhcpv6_server)
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -39,18 +38,12 @@ optional arguments:
   -D, --disable_dhcpv6  Do not use DHCPv6 protocol
   -d DNS, --dns DNS     Set recursive DNS IPv6 address
   -s DNS_SEARCH, --dns_search DNS_SEARCH
-                        Set DNS search list
+                        Set DNS search domain
   --delay DELAY         Set delay between packets
   -q, --quiet           Minimal output
 ```
 
 ### Sample script output:
-![dhcpv6_rogue_server.py output](https://raw-packet.github.io/static/images/screenshots/dhcpv6_rogue_server.py_screenshot.png)
-
-### Result:
-![dhcpv6_rogue_server.py result](https://raw-packet.github.io/static/images/screenshots/dhcpv6_rogue_server.py_result.png)
-
-### Demo video:
-[![DHCPv6 Rogue server preview](https://raw-packet.github.io/static/images/gifs/dhcpv6_rogue_server.gif)](https://youtu.be/4Sd4O35Ykaw)
+![dhcpv6_server output](https://raw-packet.github.io/static/images/screenshots/dhcpv6_server_screenshot.png)
 
 ---

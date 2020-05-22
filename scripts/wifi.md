@@ -7,9 +7,9 @@ parent: Scripts
 
 # WiFi
 
-## Script: [attack_tool.py](https://github.com/raw-packet/raw-packet/blob/master/Scripts/WiFi/attack_tool.py)
+## Script: [wat](https://github.com/raw-packet/raw-packet/blob/testing/raw_packet/Scripts/WiFi/wat.py)
 
-### Cross-platform WiFi attack tool
+### Cross-platform WiFi attack tool (wat)
 1. Works on MacOS and Linux
 1. Collects wireless AP information
 1. Sends association packets
@@ -21,10 +21,10 @@ parent: Scripts
 1. Supports vulnerability CVE-2019-15126 kr00k (decryption of CCMP packet with NULL 128 bits - temporary key)
 
 ```
-root@kali:~/raw-packet# python3 Scripts/WiFi/attack_tool.py -h
-usage: attack_tool.py [-h] [-i INTERFACE] [-c CHANNEL]
+root@kali:~# wat --help
+usage: wat [-h] [-i INTERFACE] [-c CHANNEL] [-d]
 
-Cross platform WiFi attack tool
+         Cross platform WiFi attack tool (wat)
 
 Ctrl-E Show Wireless access point information
 Ctrl-D Send IEEE 802.11 deauth packets
@@ -40,12 +40,13 @@ optional arguments:
                         Set wireless interface name for sniff packets
   -c CHANNEL, --channel CHANNEL
                         Set WiFi channel
+  -d, --debug           Maximum output
 ```
 
 ### Sample script output:
-![attack_tool.py output](https://raw-packet.github.io/static/images/screenshots/attack_tool.py_screenshot.png)
+![wat output](https://raw-packet.github.io/static/images/screenshots/wat_screenshot.png)
 
 ### Video demo:
-[![attack_tool.py demo video](https://raw-packet.github.io/static/images/gifs/attack_tool.gif)](https://youtu.be/IcZVmDHQvLE)
+[![wat demo video](https://raw-packet.github.io/static/images/gifs/attack_tool.gif)](https://youtu.be/IcZVmDHQvLE)
 
 ---
