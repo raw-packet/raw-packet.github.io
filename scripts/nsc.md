@@ -63,4 +63,7 @@ optional arguments:
 ### Sample script output:
 ![nsc output](https://raw-packet.github.io/static/images/screenshots/nsc_kali_screenshot.png)
 
+### Sample script output (test host):
+![nsc output](https://raw-packet.github.io/static/images/screenshots/nsc_kali_test_host_screenshot.png)
+
 ---
