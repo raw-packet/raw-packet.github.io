@@ -13,6 +13,7 @@ ga_tracking: UA-125485820-1
 
 ## **Raw socket programming** 
 [View on GitHub](https://github.com/raw-packet/raw-packet){: .btn .btn-purple }
+[View on Pypi](https://pypi.org/project/raw-packet/){: .btn .btn-purple }
 [Install](install){: .btn .btn-blue }
 [Usefull Scripts](scripts){: .btn }
 
