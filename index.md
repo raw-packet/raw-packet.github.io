@@ -18,11 +18,12 @@ ga_tracking: UA-125485820-1
 
 ---
 
-## Description 
-This project implements network protocols such as Ethernet ARP IPv4 UDP TCP DHCPv4 ICMPv4 IPv6 DHCPv6 ICMPv6 DNS MDNS on raw socket.
+# Important information
+***This project is created only for educational purposes and can not be used for 
+law violation or personal gain.<br/>The author of this project is not responsible for any possible harm caused by the materials of this project.***
 
-## Disclaimer
-This project is created only for educational purposes and can not be used for law violation or personal gain. The author of this project is not responsible for any possible harm caused by the materials of this project.
+# Description 
+This project implements network protocols such as Ethernet ARP IPv4 UDP TCP DHCPv4 ICMPv4 IPv6 DHCPv6 ICMPv6 DNS MDNS on raw socket.
 
 ---
 
@@ -70,4 +71,4 @@ Our testing you can see bellow
 
 ![Scapy vs. Raw-packet DNS requests](https://raw-packet.github.io/static/images/others/DNS_requests_timing.png)
 
-
+---
