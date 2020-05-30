@@ -5,6 +5,8 @@ nav_order: 1
 permalink: /install/
 ---
 
+# Install
+
 ## Debian based OS install:
 ```
 sudo apt update
